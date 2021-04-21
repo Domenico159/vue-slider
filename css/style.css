@@ -22,7 +22,7 @@ img{
     flex-direction: column;
     align-items: center;
     padding: 20px 10px;
-    background-color: aquamarine;
+    background-color: rgb(133, 243, 247);
 }
 
 .main-content h1{
@@ -38,6 +38,7 @@ img{
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.81);
 }
 
 .fa-chevron-circle-right,
@@ -88,10 +89,11 @@ img{
     cursor: pointer;
 }
 
-.box-circle i.active{
-    color: dodgerblue;
-}
 
 .box-circle i:hover{
     color: #fff;
+}
+
+.box-circle i.active{
+    color: dodgerblue;
 }

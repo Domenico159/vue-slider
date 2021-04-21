@@ -27,6 +27,14 @@ const main = new Vue({
         ],
 
         indexImg:0,
+        timeId:0,
+
+    },
+    created(){
+
+        console.log('ok instanza');
+
+        this.nextLoopImg()
 
     },
     methods:{
@@ -49,6 +57,26 @@ const main = new Vue({
             }
 
         },
+
+        clickCircle(index){
+
+            console.log(index);
+            this.indexImg = index;
+        },
+
+        nextLoopImg(){
+
+             this.timeId = setInterval( () =>{
+
+                this.nextImg()
+            
+            }, 3000 );
+
+        },
+
+        stopLoop(){
+            clearInterval(this.timeId)
+        }
     },
 
 });

@@ -16,8 +16,12 @@
 
     <main id="main">
         <div class="main-content">
-            <h1>Tittle</h1>
-            <div class="box-img">
+
+            <h1>Voglia di viaggiare</h1>
+
+            <div @mouseleave="nextLoopImg"
+             @mouseenter="stopLoop"
+             class="box-img">
                 <i @click="nextImg"
                 class="fas fa-chevron-circle-right"></i>
                 <i @click="prevImg"
@@ -25,9 +29,8 @@
                 <img :src="images[indexImg].url" :alt="images[indexImg].nome">
                 <div class="box-circle">
                     <i v-for="(element,index) in images"
-
                     :class="{ active: index == indexImg }"
-                    
+                    @click="clickCircle(index)"
                      class="fas fa-circle"></i>
                 </div>
             </div>
